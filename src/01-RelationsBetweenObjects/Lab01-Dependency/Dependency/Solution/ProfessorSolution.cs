@@ -7,15 +7,7 @@ namespace Dependency.Solution
     public class Professor
     {
         //Here the professor class depends on ICourse not Course
-        private readonly ICourse course;
-
-        //And also here, whenever the Course entity changes, the Professor is safe :D
-        public Professor(ICourse course)
-        {
-            this.course = course;
-        }
-
-        public void PrintCourseInfo(){
+        public void PrintCourseInfo(ICourse course){
             Console.WriteLine($"The course with id {course.Id} has a price of {course.CalculatePriceAfterTax()}");
         }
     }

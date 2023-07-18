@@ -11,11 +11,11 @@
 
         //Solution Test
 
-        var sCourse = new Dependency.Problem.Course{
+        var sCourse = new Dependency.Solution.Course{
             Id = 2,
             Price = 2000,
         };
-        var sProfessor = new Dependency.Problem.Professor();
+        var sProfessor = new Dependency.Solution.Professor();
         sProfessor.PrintCourseInfo(sCourse); //Prints => The course with id 2 has a price of 2280.00
     }
 }

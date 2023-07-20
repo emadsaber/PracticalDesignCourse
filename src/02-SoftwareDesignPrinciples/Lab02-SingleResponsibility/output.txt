@@ -1,0 +1,2 @@
+Hi Moaz, An invoice with serial INV-2023-07-20-00001 was successfully sent to your email: moaz.emad@email.com
+Hi Marawan, An invoice with serial INV-2023-07-20-00002 was successfully sent to your email: marawan.emad@email.com

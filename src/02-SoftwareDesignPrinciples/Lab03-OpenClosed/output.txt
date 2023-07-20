@@ -1,0 +1,2 @@
+Total Shipping Cost is: 225, and will be shipped on 7/22/2023 6:22:47 PM
+Total Shipping Cost is: 0 because it's total cost is 960, and will be shipped on 7/20/2023 6:22:47 PM

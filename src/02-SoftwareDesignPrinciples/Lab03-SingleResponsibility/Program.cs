@@ -1,4 +1,4 @@
-﻿namespace Lab02_SingleResponsibility;
+﻿namespace Lab03_SingleResponsibility;
 class Program{
 
     public static void Main(string[] args){

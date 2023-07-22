@@ -1,4 +1,4 @@
-namespace Lab03_OpenClosed.Solution;
+namespace Lab04_OpenClosed.Solution;
 
 class LineItem
 {

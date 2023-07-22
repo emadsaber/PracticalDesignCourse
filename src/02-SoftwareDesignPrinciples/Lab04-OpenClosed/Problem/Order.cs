@@ -1,4 +1,4 @@
-namespace Lab03_OpenClosed.Problem;
+namespace Lab04_OpenClosed.Problem;
 
 class LineItem{
     public string Name { get; set; }

@@ -1,4 +1,4 @@
-namespace Lab02_SingleResponsibility.Solution;
+namespace Lab03_SingleResponsibility.Solution;
 class Invoice
 {
     public string Serial { get; set; }

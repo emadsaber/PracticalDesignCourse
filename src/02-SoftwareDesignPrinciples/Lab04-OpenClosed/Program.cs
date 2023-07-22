@@ -1,4 +1,4 @@
-﻿namespace Lab03_OpenClosed;
+﻿namespace Lab04_OpenClosed;
 class Program{
 
     public static void Main(string[] args){

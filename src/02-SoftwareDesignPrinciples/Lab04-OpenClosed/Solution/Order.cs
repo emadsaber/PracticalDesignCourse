@@ -50,7 +50,7 @@ class GroundShipping : IShipping
 class Order
 {
     private List<LineItem> LineItems = new List<LineItem>();
-    private IShipping shipping; //designed to an implementation
+    private IShipping shipping; //designed to an interface not implementation
 
     public Order(List<LineItem> lineItems, IShipping shipping)
     {

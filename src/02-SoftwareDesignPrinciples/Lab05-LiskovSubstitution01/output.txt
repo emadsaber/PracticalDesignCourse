@@ -1,3 +1,6 @@
 Feeding cat Kitty
+Feeding cat Bengal Kitten
 Feeding animal Puppy
 Feeding animal Kitty
+Feeding animal Bengal Kitten
+Feeding BengalCat Bengal Kitten

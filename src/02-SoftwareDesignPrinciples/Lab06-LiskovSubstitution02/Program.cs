@@ -13,6 +13,10 @@ class Cat : Animal
     {
         //silence is great
     }
+
+    public void SayMyType(){
+        Console.WriteLine($"Hello, My name is: {Name}!");
+    }
 }
 
 class BengalCat : Cat
@@ -21,6 +25,8 @@ class BengalCat : Cat
     {
         //silence is great
     }
+
+    
 }
 
 class CatFactory
@@ -33,12 +39,18 @@ class CatFactory
 
 class AnotherCatFactory : CatFactory
 {
-    //We can use BengalCat return type but we can't use Animal
+    //We can use BengalCat return type 
     //we used "new" to remove a warning that we are hiding a member of base class
-    public new Animal CreateCat(string name) 
+    public new BengalCat CreateCat(string name) 
     {
         return new BengalCat(name);
     }
+    
+    //but we can't use Animal as return type
+    // public new Animal CreateCat(string name) 
+    // {
+    //     return new BengalCat(name);
+    // }
 }
 
 class Program
@@ -53,5 +65,7 @@ class Program
 
         Console.WriteLine($"CatFactory create a cat named {cat1.Name}");
         Console.WriteLine($"AnotherCatFactory create a cat named {cat2.Name}");
+
+        cat2.SayMyType();
     }
 }

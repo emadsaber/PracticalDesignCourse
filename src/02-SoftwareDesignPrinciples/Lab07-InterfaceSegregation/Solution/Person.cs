@@ -17,10 +17,41 @@ interface IEmployee
 #endregion interface
 
 
-class Person : IPerson, IEmployee
+class Child : IPerson
 {
     #region ctor
-    public Person(string name, DateTime? hireDate)
+    public Child(string name)
+    {
+        Name = name;
+    }
+    #endregion
+
+    #region  props
+    public string Name { get; init; }
+    #endregion
+
+    #region IPerson interface
+    public void Eat()
+    {
+        Console.WriteLine($"{Name} | OMG, so delicious food!...");
+    }
+
+    public void Speak()
+    {
+        Console.WriteLine($"{Name} | Hello, and I'm happy...");
+    }
+
+    public void Walk()
+    {
+        Console.WriteLine($"{Name} | It's good weather for walking...");
+    }
+    #endregion
+}
+
+class Employee : IPerson, IEmployee
+{
+    #region ctor
+    public Employee(string name, DateTime? hireDate)
     {
         Name = name;
         HireDate = hireDate;
@@ -51,7 +82,7 @@ class Person : IPerson, IEmployee
     }
     #endregion
 
-    #region IEmployee
+    #region IEmployee interface
     public void DoWork()
     {
         Console.WriteLine($"{Name} | Let's do our job perfectly!...");
@@ -59,7 +90,9 @@ class Person : IPerson, IEmployee
 
     public void Resign()
     {
-        Console.WriteLine($"{Name} | Dear Boss, I was hired on {HireDate:d} I can't afford it anymore, Good Bye!...");
+        Console.WriteLine(
+            $"{Name} | Dear Boss, I was hired on {HireDate:d} I can't afford it anymore, Good Bye!..."
+        );
     }
     #endregion
 }

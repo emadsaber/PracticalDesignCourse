@@ -13,13 +13,12 @@ interface IPerson
 #endregion interface
 
 
-class Person : IPerson
+class Child : IPerson
 {
     #region ctor
-    public Person(string name, DateTime? hireDate)
+    public Child(string name)
     {
         Name = name;
-        HireDate = hireDate;
     }
     #endregion
 
@@ -31,21 +30,14 @@ class Person : IPerson
     #endregion
 
     #region IPerson interface
-    public void DoWork()
-    {
-        Console.WriteLine($"{Name} | Let's do our job perfectly!...");
-    }
+
 
     public void Eat()
     {
         Console.WriteLine($"{Name} | OMG, so delicious food!...");
     }
 
-    public void Resign()
-    {
-        Console.WriteLine($"{Name} | Dear Boss, I can't afford it anymore, Good Bye!...");
-    }
-
+    
     public void Speak()
     {
         Console.WriteLine($"{Name} | Hello, and I'm happy...");
@@ -55,5 +47,16 @@ class Person : IPerson
     {
         Console.WriteLine($"{Name} | It's good weather for walking...");
     }
+
+    public void DoWork()
+    {
+        throw new NotImplementedException("Child is not working");
+    }
+    
+    public void Resign()
+    {
+        throw new NotImplementedException("Child is not working");
+    }
+
     #endregion
 }

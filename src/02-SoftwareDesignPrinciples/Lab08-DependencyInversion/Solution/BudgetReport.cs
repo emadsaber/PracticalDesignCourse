@@ -18,6 +18,7 @@ class BudgetReport : IEntity
 {
     //You can change the type to MySqlDatabase<BudgetReport> and get the same result
     private IDatabase<BudgetReport> database = new MongoDbDatabase<BudgetReport>();
+    public Guid Id { get; set; }
     public DateTime ReportDate { get; set; }
 
     public BudgetReport(DateTime reportDate)

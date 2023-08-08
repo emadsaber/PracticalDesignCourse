@@ -8,7 +8,6 @@ interface IEntity
 class BudgetReport : IEntity
 {
     private MySqlDatabase<BudgetReport> database = new MySqlDatabase<BudgetReport>();
-    public Guid Id { get; set; }
     public DateTime ReportDate { get; set; }
 
     public BudgetReport(DateTime reportDate)

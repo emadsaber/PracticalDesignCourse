@@ -1,0 +1,20 @@
+-------------Problem Test---------
+Preparing Pepproni Pizza
+Adding toppings:
+        Cheese
+        Pepproni
+        Olive Slices
+        Green pepper
+Bake for 30 minutes at 400
+Cutting the pizza into diagonal slices
+Place pizza in official PizzaStore box
+Total Price will be: 120
+-------------Solution Test---------
+Preparing Mexican Vegetable Pizza
+Adding toppings:
+        Mexican Olive Slices
+        Green pepper
+Bake for 25 minutes at 350
+Cutting the pizza into diagonal slices
+Place pizza in official PizzaStore box
+Total Price will be: 60

@@ -20,7 +20,7 @@ interface Button is
     method render()
     method onClick(f)
 
-class WindowsButton implements Butttton is
+class WindowsButton implements Button is
     method render(a, b) is
         // Return an HTML representation of a button.
     method onClick(f) is

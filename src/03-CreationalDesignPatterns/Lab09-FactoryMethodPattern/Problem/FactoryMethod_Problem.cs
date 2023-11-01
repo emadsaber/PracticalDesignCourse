@@ -81,7 +81,6 @@ class PizzaStore
         //here is the problem:
         //1- if we want to add a new pizza type, we should make a modification here
         //2- This code doesn't respect OCP, because it's not closed for modification and there is another code for preparing pizza
-        //3- If we need to add another Pizza Store, this code will get more complicated
         //We should take a step to move Pizza object initialization to a separate object called : Factory
         if(type == "cheese"){
             pizza = new CheesePizza();

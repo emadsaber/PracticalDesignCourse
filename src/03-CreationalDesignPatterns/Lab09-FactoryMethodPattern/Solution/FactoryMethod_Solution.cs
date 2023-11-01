@@ -39,52 +39,23 @@ abstract class Pizza
     }
 }
 
-class MexicanCheesePizza : Pizza
+class CheesePizza : Pizza
 {
-    public MexicanCheesePizza()
+    public CheesePizza()
     {
-        Name = "Mexican Cheese Pizza";
-        Toppings = new List<string> { "Mexican Cheese", "Mozzarilla", "Cheddar", };
+        Name = "Cheese Pizza";
+        Toppings = new List<string> { "Cheese", "Mozzarilla", "Cheddar", };
     }
 }
 
-class ItalianCheesePizza : Pizza
+class PepproniPizza : Pizza
 {
-    public ItalianCheesePizza()
+    public PepproniPizza()
     {
-        Name = "Italian Cheese Pizza";
-        Toppings = new List<string> { "Italian Cheese", "Cheddar", };
-    }
-}
-
-class MexicanPepproniPizza : Pizza
-{
-    public MexicanPepproniPizza()
-    {
-        Name = "Mexican Pepproni Pizza";
+        Name = "Pepproni Pizza";
         Toppings = new List<string>
         {
-            "Mexican Cheese",
-            "Pepproni",
-            "Olive Slices",
-            "Green pepper"
-        };
-    }
-
-    public override void Bake()
-    {
-        Console.WriteLine("Bake for 35 minutes at 450");
-    }
-}
-
-class ItalianPepproniPizza : Pizza
-{
-    public ItalianPepproniPizza()
-    {
-        Name = "Italian Pepproni Pizza";
-        Toppings = new List<string>
-        {
-            "Italian Cheese",
+            "Cheese",
             "Pepproni",
             "Olive Slices",
             "Green pepper"
@@ -97,76 +68,48 @@ class ItalianPepproniPizza : Pizza
     }
 }
 
-class MexicanVegetablePizza : Pizza
+class VegetablePizza : Pizza
 {
-    public MexicanVegetablePizza()
-    {
-        Name = "Mexican Vegetable Pizza";
-        Toppings = new List<string> { "Mexican Olive Slices", "Green pepper", };
-    }
-}
-
-class ItalianVegetablePizza : Pizza
-{
-    public ItalianVegetablePizza()
+    public VegetablePizza()
     {
         Name = "Vegetable Pizza";
-        Toppings = new List<string> { "ItalianOlive Slices", "Green pepper", };
+        Toppings = new List<string> { "Olive Slices", "Green pepper", };
     }
 }
 
-class MexicanPizzaStore : PizzaStore
+
+class CheesePizzaKitchen : Kitchen
 {
     //Respects SRP
-    protected override Pizza CreatePizza(string type)//This is a factory method
+    protected override Pizza CreatePizza()//This is a factory method
     {
-        Pizza pizza = null;
-
-        if (type == "cheese")
-        {
-            pizza = new MexicanCheesePizza();
-        }
-        else if (type == "pepproni")
-        {
-            pizza = new MexicanPepproniPizza();
-        }
-        else if (type == "vegetable")
-        {
-            pizza = new MexicanVegetablePizza();
-        }
-        return pizza;
+        return new CheesePizza();
     }
 }
-
-class ItalianPizzaStore : PizzaStore
+class PepproniPizzaKitchen : Kitchen
 {
     //Respects SRP
-    protected override Pizza CreatePizza(string type)//This is a factory method
+    protected override Pizza CreatePizza()//This is a factory method
     {
-        Pizza pizza = null;
-        if (type == "cheese")
-        {
-            pizza = new ItalianCheesePizza();
-        }
-        else if (type == "pepproni")
-        {
-            pizza = new ItalianPepproniPizza();
-        }
-        else if (type == "vegetable")
-        {
-            pizza = new ItalianVegetablePizza();
-        }
-        return pizza;
+        return new PepproniPizza();
+    }
+}
+class VegetablePizzaKitchen : Kitchen
+{
+    //Respects SRP
+    protected override Pizza CreatePizza()//This is a factory method
+    {
+        return new VegetablePizza();
     }
 }
 
-abstract class PizzaStore //marked as abstract to prohibit clients of instantiation
+abstract class Kitchen //marked as abstract to prohibit clients of instantiation
 {
-    public Pizza OrderPizza(string type)
+    public Pizza GetPizza()
     {
         Pizza pizza = null;
 
-        pizza = CreatePizza(type); //Initialization code splitted to each store type
+        pizza = CreatePizza(); //Initialization code splitted to each store type
 
         pizza.Prepare();
         pizza.Bake();
@@ -177,5 +120,5 @@ abstract class PizzaStore //marked as abstract to prohibit clients of instantiat
         return pizza;
     }
 
-    protected abstract Pizza CreatePizza(string type);
+    protected abstract Pizza CreatePizza();
 }

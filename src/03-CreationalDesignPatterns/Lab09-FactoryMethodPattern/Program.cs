@@ -7,7 +7,7 @@
         problem.OrderPizza("pepproni");
 
         Console.WriteLine("-------------Solution Test---------");
-        var solution = new FactoryMethod.Solution.MexicanPizzaStore();
-        solution.OrderPizza("vegetable");
+        var solution = new FactoryMethod.Solution.PepproniPizzaKitchen();
+        solution.GetPizza();
     }
 }

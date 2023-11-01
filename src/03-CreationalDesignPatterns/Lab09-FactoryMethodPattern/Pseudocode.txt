@@ -1,11 +1,12 @@
+// From Refactoring.guru : Dive into Design Patterns book
+
 class Dialog is
+    abstract method createButton():Button
 
-abstract method createButton():Button
-
- method render() is
-    Button okButton = createButton()
-    okButton.onClick(closeDialog)
-    okButton.render()
+    method render() is
+        Button okButton = createButton()
+        okButton.onClick(closeDialog)
+        okButton.render()
 
  class WindowsDialog extends Dialog is
     method createButton():Button is

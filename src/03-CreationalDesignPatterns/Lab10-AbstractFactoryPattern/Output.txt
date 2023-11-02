@@ -1,0 +1,13 @@
+-------------Problem Test---------
+I'm a PlasticChair with width 40 and height 110
+I'm a PlasticTable with diameter 110 and height 100
+I'm a PlasticSpoon with length 12 and weight 30
+I'm a WoodChair with width 50 and height 120
+I'm a WoodTable with diameter 120 and height 120
+I'm a WoodSpoon with length 15 and weight 40
+-------------Solution Test---------
+Enter the material type:
+wood
+I'm a WoodChair with width 40 and height 110
+I'm a WoodTable with diameter 110 and height 100
+I'm a WoodSpoon with length 12 and weight 30

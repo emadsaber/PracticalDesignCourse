@@ -2,132 +2,71 @@ namespace Builder.Solution;
 
 public interface IComputerBuilder
 {
-    void Reset();
-    IComputerBuilder BuildMotherBoard();
-    IComputerBuilder BuildProcessor();
-    IComputerBuilder BuildMemory();
-    IComputerBuilder BuildHDD();
-    IComputerBuilder BuildScreen();
-    IComputerBuilder BuildUsbPorts();
-    IComputerBuilder BuildWifiCard();
+    IComputerBuilder Reset();
+    IComputerBuilder BuildMotherBoard(string motherboard);
+    IComputerBuilder BuildProcessor(string processor);
+    IComputerBuilder BuildMemory(int capacity);
+    IComputerBuilder BuildHDD(int capacity);
+    IComputerBuilder BuildScreen(double screenSize);
+    IComputerBuilder BuildUsbPorts(int portsCount);
+    IComputerBuilder BuildWifiCard(string wifi);
     Computer GetComputer();
 }
 
-public class LaptopBuilder : IComputerBuilder
+public class ComputerBuilder : IComputerBuilder
 {
     private Computer _computer;
 
-    public LaptopBuilder()
+    public ComputerBuilder()
     {
         this.Reset();
     }
 
-    public void Reset()
+    public IComputerBuilder Reset()
     {
         _computer = new Computer();
-    }
-
-    public IComputerBuilder BuildMotherBoard()
-    {
-        _computer.Add($"Motherboard \t\t: Lenovo Legion 5");
         return this;
     }
 
-    public IComputerBuilder BuildProcessor()
+    public IComputerBuilder BuildMotherBoard(string motherboard)
     {
-        _computer.Add($"Processor \t\t: Intel Core i5 10400F, #Cores: 8");
+        _computer.Add($"Motherboard \t\t: {motherboard}");
         return this;
     }
 
-    public IComputerBuilder BuildMemory()
+    public IComputerBuilder BuildProcessor(string processor)
     {
-        _computer.Add($"Memory \t\t\t: 16 GB");
+        _computer.Add($"Processor \t\t: {processor}");
         return this;
     }
 
-    public IComputerBuilder BuildHDD()
+    public IComputerBuilder BuildMemory(int capacity)
     {
-        _computer.Add($"HDD \t\t\t: 256 GB");
+        _computer.Add($"Memory \t\t\t: {capacity} GB");
         return this;
     }
 
-    public IComputerBuilder BuildScreen()
+    public IComputerBuilder BuildHDD(int capacity)
     {
-        _computer.Add($"Screen \t\t\t: 16 inches");
+        _computer.Add($"HDD \t\t\t: {capacity} GB");
         return this;
     }
 
-    public IComputerBuilder BuildUsbPorts()
+    public IComputerBuilder BuildScreen(double screenSize)
     {
-        _computer.Add($"Ports \t\t\t: 5 ports");
+        _computer.Add($"Screen \t\t\t: {screenSize} inches");
         return this;
     }
 
-    public IComputerBuilder BuildWifiCard()
+    public IComputerBuilder BuildUsbPorts(int portsCount)
     {
-        _computer.Add($"Wifi \t\t\t: Inter Centrino Wireless i/b/g/n");
+        _computer.Add($"Ports \t\t\t: {portsCount} ports");
         return this;
     }
 
-    public Computer GetComputer()
+    public IComputerBuilder BuildWifiCard(string wifi)
     {
-        return _computer;
-    }
-}
-
-public class WorkstationBuilder : IComputerBuilder
-{
-    private Computer _computer;
-
-    public WorkstationBuilder()
-    {
-        this.Reset();
-    }
-
-    public void Reset()
-    {
-        _computer = new Computer();
-    }
-
-    public IComputerBuilder BuildMotherBoard()
-    {
-        _computer.Add($"Motherboard \t\t: Gigabyte Z790 Aorus Xtreme");
-        return this;
-    }
-
-    public IComputerBuilder BuildProcessor()
-    {
-        _computer.Add($"Processor \t\t: Intel Core i7 10750H, #Cores: 16");
-        return this;
-    }
-
-    public IComputerBuilder BuildMemory()
-    {
-        _computer.Add($"Memory \t\t\t: 64 GB");
-        return this;
-    }
-
-    public IComputerBuilder BuildHDD()
-    {
-        _computer.Add($"HDD \t\t\t: 1 TB");
-        return this;
-    }
-
-    public IComputerBuilder BuildScreen()
-    {
-        //Workstation computer doesn't have a screen
-        return this;
-    }
-
-    public IComputerBuilder BuildUsbPorts()
-    {
-        _computer.Add($"Ports \t\t\t: 15 ports");
-        return this;
-    }
-
-    public IComputerBuilder BuildWifiCard()
-    {
-        //Workstation computer doesn't have a WIFI card
+        _computer.Add($"Wifi \t\t\t: {wifi}");
         return this;
     }
 
@@ -139,16 +78,31 @@ public class WorkstationBuilder : IComputerBuilder
 
 public class ComputerDirector
 {
-    public Computer BuildComputer(IComputerBuilder computerBuilder)
+    public Computer BuildLaptop(IComputerBuilder computerBuilder)
     {
         return computerBuilder
-            .BuildMotherBoard()
-            .BuildHDD()
-            .BuildProcessor()
-            .BuildMemory()
-            .BuildUsbPorts()
-            .BuildScreen()
-            .BuildWifiCard()
+            .Reset()
+            .BuildMotherBoard("Lenovo Legion 5")
+            .BuildHDD(256)
+            .BuildProcessor("Intel Core i5 10400F, #Cores: 8")
+            .BuildMemory(16)
+            .BuildUsbPorts(5)
+            .BuildScreen(16)
+            .BuildWifiCard("Inter Centrino Wireless i/b/g/n")
+            .GetComputer();
+    }
+
+    public Computer BuildWorkstation(IComputerBuilder computerBuilder)
+    {
+        return computerBuilder
+            .Reset()
+            .BuildMotherBoard("Gigabyte Z790 Aorus Xtreme")
+            .BuildHDD(1024)
+            .BuildProcessor("Intel Core i7 10750H, #Cores: 16")
+            .BuildMemory(64)
+            .BuildUsbPorts(15)
+            //.BuildScreen()
+            //.BuildWifiCard()
             .GetComputer();
     }
 }

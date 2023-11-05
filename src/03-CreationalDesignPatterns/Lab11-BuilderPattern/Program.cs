@@ -34,11 +34,10 @@
 
         Console.WriteLine("================Solution Test================");
         var director = new Builder.Solution.ComputerDirector();
-        var laptopBuilder = new Builder.Solution.LaptopBuilder();
-        var workstationBuilder = new Builder.Solution.WorkstationBuilder();
+        var computerBuilder = new Builder.Solution.ComputerBuilder();
 
-        var laptop2 = director.BuildComputer(laptopBuilder);
-        var workstation2 = director.BuildComputer(workstationBuilder);
+        var laptop2 = director.BuildLaptop(computerBuilder);
+        var workstation2 = director.BuildWorkstation(computerBuilder);
 
         Console.WriteLine("----------Solution :: Printing Laptop Information-------");
         Console.WriteLine(laptop2);

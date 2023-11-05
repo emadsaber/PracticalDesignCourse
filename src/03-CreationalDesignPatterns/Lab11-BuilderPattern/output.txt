@@ -1,0 +1,34 @@
+================Problem Test================
+----------Problem :: Printing Laptop Information-------
+Computer parts: 
+Motherboard             : Lenovo Legion 5, 
+Processor               : Intel Core i5 10400F, #Cores: 8, 
+Memory                  : 16 GB, 
+HDD                     : 256 GB, 
+Screen                  : 16 inches, 
+Ports                   : 5 ports, 
+Wifi                    : Inter Centrino Wireless i/b/g/n,
+----------Problem :: Printing Workstation Information-------
+Computer parts: 
+Motherboard             : Gigabyte Z790 Aorus Xtreme, 
+Processor               : Intel Core i7 10750H, #Cores: 16, 
+Memory                  : 64 GB, 
+HDD                     : 1 TB, 
+Ports                   : 15 ports,
+================Solution Test================
+----------Solution :: Printing Laptop Information-------
+Computer parts: 
+Motherboard             : Lenovo Legion 5, 
+HDD                     : 256 GB, 
+Processor               : Intel Core i5 10400F, #Cores: 8, 
+Memory                  : 16 GB, 
+Ports                   : 5 ports, 
+Screen                  : 16 inches, 
+Wifi                    : Inter Centrino Wireless i/b/g/n,
+----------Solution :: Printing Workstation Information----------
+Computer parts: 
+Motherboard             : Gigabyte Z790 Aorus Xtreme, 
+HDD                     : 1 TB, 
+Processor               : Intel Core i7 10750H, #Cores: 16, 
+Memory                  : 64 GB, 
+Ports                   : 15 ports,

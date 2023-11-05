@@ -19,7 +19,7 @@ public class LaptopBuilder : IComputerBuilder
 
     public LaptopBuilder()
     {
-        _computer = new Computer();
+        this.Reset();
     }
 
     public void Reset()
@@ -81,7 +81,7 @@ public class WorkstationBuilder : IComputerBuilder
 
     public WorkstationBuilder()
     {
-        _computer = new Computer();
+        this.Reset();
     }
 
     public void Reset()

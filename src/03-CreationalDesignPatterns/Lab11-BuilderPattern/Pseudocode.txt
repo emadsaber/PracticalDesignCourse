@@ -117,10 +117,10 @@ class CarManualBuilder implements Builder is
             builder.setGPS(true)
 
         method constructSUV(builder: Builder) is
-    // ...
-    // The client code creates a builder object, passes it to the
-    // director and then initiates the construction process. The end
-    // result is retrieved from the builder object.
+            // ...
+            // The client code creates a builder object, passes it to the
+            // director and then initiates the construction process. The end
+            // result is retrieved from the builder object.
     class Application is
 
         method makeCar() is

@@ -80,6 +80,7 @@ public class ComputerDirector
 {
     public Computer BuildLaptop(IComputerBuilder computerBuilder)
     {
+        //Chaining : JQuery 
         return computerBuilder
             .Reset()
             .BuildMotherBoard("Lenovo Legion 5")
@@ -89,7 +90,7 @@ public class ComputerDirector
             .BuildUsbPorts(5)
             .BuildScreen(16)
             .BuildWifiCard("Inter Centrino Wireless i/b/g/n")
-            .GetComputer();
+            .GetComputer() ;
     }
 
     public Computer BuildWorkstation(IComputerBuilder computerBuilder)

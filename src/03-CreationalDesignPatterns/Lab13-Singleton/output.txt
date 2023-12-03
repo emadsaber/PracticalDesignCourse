@@ -1,0 +1,43 @@
+----------------------------Problem Test--------------------------
+--------Printing the first object content:-----------
+--------Printing 2 Students-----------
+Student => Id: 1, Name: Moaz
+Student => Id: 2, Name: Marawan
+--------Printing 2 Departments-----------
+Department => Id: 1, Name: Computer Science, Code: D1
+Department => Id: 2, Name: Information Technology, Code: D2
+--------Printing the second object content:-----------
+--------Printing 1 Students-----------
+Student => Id: 3, Name: Ahmed
+--------Printing 0 Departments-----------
+----------------------------Solution Test--------------------------
+--------Printing the first object content:-----------
+--------Printing 2 Students-----------
+Student => Id: 1, Name: Moaz
+Student => Id: 2, Name: Marawan
+--------Printing 2 Departments-----------
+Department => Id: 1, Name: Computer Science, Code: D1
+Department => Id: 2, Name: Information Technology, Code: D2
+--------Printing the second object content:-----------
+--------Printing 3 Students-----------
+Student => Id: 1, Name: Moaz
+Student => Id: 2, Name: Marawan
+Student => Id: 3, Name: Ahmed
+--------Printing 2 Departments-----------
+Department => Id: 1, Name: Computer Science, Code: D1
+Department => Id: 2, Name: Information Technology, Code: D2
+----------------------------Thread-Safe Solution Test--------------------------
+--------Printing the first object content:-----------
+--------Printing the first object content:-----------
+--------Printing 2 Students-----------
+--------Printing 2 Students-----------
+Student => Id: 1, Name: Moaz, CreatedBy: thread 2
+Student => Id: 2, Name: Marawan, CreatedBy: thread 2
+--------Printing 2 Departments-----------
+Department => Id: 1, Name: Computer Science, Code: D1, CreatedBy: thread 2
+Department => Id: 2, Name: Information Technology, Code: D2, CreatedBy: thread 2
+Student => Id: 1, Name: Moaz, CreatedBy: thread 1
+Student => Id: 2, Name: Marawan, CreatedBy: thread 1
+--------Printing 2 Departments-----------
+Department => Id: 1, Name: Computer Science, Code: D1, CreatedBy: thread 1
+Department => Id: 2, Name: Information Technology, Code: D2, CreatedBy: thread 1

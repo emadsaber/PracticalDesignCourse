@@ -4,11 +4,10 @@ class Student
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public string CreatedBy { get; set; }
 
     public override string ToString()
     {
-        return $"Student => Id: {Id}, Name: {Name}, CreatedBy: {CreatedBy}";
+        return $"Student => Id: {Id}, Name: {Name}";
     }
 }
 
@@ -17,11 +16,10 @@ class Department
     public int Id { get; set; }
     public string Name { get; set; }
     public string Code { get; set; }
-    public string CreatedBy { get; set; }
 
     public override string ToString()
     {
-        return $"Department => Id: {Id}, Name: {Name}, Code: {Code}, CreatedBy: {CreatedBy}";
+        return $"Department => Id: {Id}, Name: {Name}, Code: {Code}";
     }
 }
 
@@ -29,14 +27,19 @@ class InMemoryDatabase
 {
     private static InMemoryDatabase _instance;
     private static readonly object _lock = new object();
+    public string Identifier { get; set; }
 
-    public static InMemoryDatabase GetInstance()
+    public static InMemoryDatabase GetInstance(string identifier)
     {
         if (_instance == null)
         {
             lock (_lock) //to be thread-safe
             {
-                _instance = new InMemoryDatabase();
+                if (_instance == null)
+                {
+                    _instance = new InMemoryDatabase();
+                    _instance.Identifier = identifier;
+                }
             }
         }
 
@@ -48,7 +51,7 @@ class InMemoryDatabase
         Students = new List<Student>();
         Departments = new List<Department>();
     }
-    
+
     public List<Student> Students { get; set; }
 
     public List<Department> Departments { get; set; }
@@ -71,33 +74,14 @@ class InMemoryDatabase
 
 class Client
 {
-    public void CreateDatabaseInstanceThread(string identifier) {
-        var db = InMemoryDatabase.GetInstance();
-        
-        db.Departments.Add(
-            new Department
-            {
-                Id = db.Departments.Count + 1,
-                Code = "D1",
-                Name = "Computer Science",
-                CreatedBy = identifier
-            }
-        );
-        db.Departments.Add(
-            new Department
-            {
-                Id = db.Departments.Count + 1,
-                Code = "D2",
-                Name = "Information Technology",
-                CreatedBy = identifier
-            }
-        );
-        db.Students.Add(new Student { Id = db.Students.Count + 1, Name = "Moaz", CreatedBy = identifier});
-        db.Students.Add(new Student { Id = db.Students.Count + 1, Name = "Marawan", CreatedBy = identifier });
+    public void CreateDatabaseInstanceThread(string identifier)
+    {
+        var db = InMemoryDatabase.GetInstance(identifier);
 
-        Console.WriteLine($"--------Printing the first object content:-----------");
-        db.PrintAll();
-     }
+        Console.WriteLine(
+            $"--------Printing the database instance identifier: {db.Identifier}-----------"
+        );
+    }
 
     public void Test()
     {
@@ -110,10 +94,22 @@ class Client
             CreateDatabaseInstanceThread("thread 2");
         });
 
+        Thread process3 = new Thread(() =>
+        {
+            CreateDatabaseInstanceThread("thread 3");
+        });
+        Thread process4 = new Thread(() =>
+        {
+            CreateDatabaseInstanceThread("thread 4");
+        });
         process1.Start();
         process2.Start();
+        process3.Start();
+        process4.Start();
 
         process1.Join();
         process2.Join();
+        process3.Join();
+        process4.Join();
     }
 }

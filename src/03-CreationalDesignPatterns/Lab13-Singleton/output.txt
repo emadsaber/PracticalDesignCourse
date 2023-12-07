@@ -27,7 +27,7 @@ Student => Id: 3, Name: Ahmed
 Department => Id: 1, Name: Computer Science, Code: D1
 Department => Id: 2, Name: Information Technology, Code: D2
 ----------------------------Thread-Safe Solution Test--------------------------
---------Printing the database instance identifier: thread 2-----------
---------Printing the database instance identifier: thread 2-----------
---------Printing the database instance identifier: thread 2-----------
---------Printing the database instance identifier: thread 2-----------
+--------Printing the database instance identifier: thread 1-----------
+--------Printing the database instance identifier: thread 1-----------
+--------Printing the database instance identifier: thread 1-----------
+--------Printing the database instance identifier: thread 1-----------

@@ -31,15 +31,12 @@ class InMemoryDatabase
 
     public static InMemoryDatabase GetInstance(string identifier)
     {
-        if (_instance == null)
+        lock (_lock) //to be thread-safe
         {
-            lock (_lock) //to be thread-safe
+            if (_instance == null)
             {
-                if (_instance == null)
-                {
-                    _instance = new InMemoryDatabase();
-                    _instance.Identifier = identifier;
-                }
+                _instance = new InMemoryDatabase();
+                _instance.Identifier = identifier;
             }
         }
 

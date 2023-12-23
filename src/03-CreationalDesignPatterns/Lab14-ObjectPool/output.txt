@@ -1,0 +1,4 @@
+Currently Object Pool has 50 items
+An object from object pool is retieved: Lab14_ObjectPool.Solution.NPC
+Currently Object Pool has 49 items
+Currently Object Pool has 50 items

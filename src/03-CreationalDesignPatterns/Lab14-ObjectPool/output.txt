@@ -1,3 +1,13 @@
+Scene 1 requires 50 NPCs
+Current NPCs count in scene 1 is 50
+Clear NPCs list after scene 1 to save memory...
+Current NPCs count after scene 1 is 0
+----------------------------------------------------
+Scene 2 requires another 100 NPCs
+Current NPCs count in scene 2 is 100
+Clear NPCs list after scene 2 to save memory...
+Current NPCs count after scene 2 is 0
+----------------------------------------------------
 Currently Object Pool has 50 items
 An object from object pool is retieved: Lab14_ObjectPool.Solution.NPC
 Currently Object Pool has 49 items

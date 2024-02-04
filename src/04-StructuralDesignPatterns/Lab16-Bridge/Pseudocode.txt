@@ -35,13 +35,13 @@ class RemoteControl is
  // provides only primitive operations, while the abstraction
  // defines higher-level operations based on those primitives.
  interface Device is
- method isEnabled()
- method enable()
- method disable()
- method getVolume()
- method setVolume(percent)
- method getChannel()
- method setChannel(channel)
+    method isEnabled()
+    method enable()
+    method disable()
+    method getVolume()
+    method setVolume(percent)
+    method getChannel()
+    method setChannel(channel)
 
 
  // All devices follow the same interface.

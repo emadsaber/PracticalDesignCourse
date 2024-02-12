@@ -1,0 +1,14 @@
+Basic Notifier: Welcome to your app!
+--------------------------------------------
+Basic Notifier: Message on Facebook only!
+FACEBOOK : Message on Facebook only!
+--------------------------------------------
+Basic Notifier: Message on Facebook + SMS!
+FACEBOOK : Message on Facebook + SMS!
+SMS : Message on Facebook + SMS!
+--------------------------------------------
+Basic Notifier: Message on Facebook + SMS + Teams!
+FACEBOOK : Message on Facebook + SMS + Teams!
+SMS : Message on Facebook + SMS + Teams!
+TEAMS : Message on Facebook + SMS + Teams!
+--------------------------------------------

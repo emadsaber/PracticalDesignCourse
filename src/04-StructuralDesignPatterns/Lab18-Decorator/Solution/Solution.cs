@@ -23,7 +23,8 @@ namespace Lab18_Decorator.Solution
         }
 
         public override void Notify(string message){
-            _notifier.Notify(message);
+            if(_notifier != null)
+                _notifier.Notify(message);
         }
     }
 

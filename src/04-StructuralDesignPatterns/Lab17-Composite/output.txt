@@ -1,11 +1,11 @@
-Task List: Programming Technologies
-Task List: Frontend
-Simple Task Javascript
-Simple Task HTML
-Simple Task Typescript
-Simple Task CSS
-Task List: Backend
-Simple Task C#
-Simple Task SQL Server
-Simple Task RabbitMq
-Simple Task NServiceBus
+Parent: Programming Technologies
+Parent: Frontend
+        Simple Task: Javascript
+        Simple Task: HTML
+        Simple Task: Typescript
+        Simple Task: CSS
+Parent: Backend
+        Simple Task: C#
+        Simple Task: SQL Server
+        Simple Task: RabbitMq
+        Simple Task: NServiceBus

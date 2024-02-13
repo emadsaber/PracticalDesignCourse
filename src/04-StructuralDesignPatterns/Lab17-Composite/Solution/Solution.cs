@@ -20,7 +20,7 @@ namespace Lab17_Composite.Solution
         public string Title { get; set; }
 
         public void Display() { 
-            Console.WriteLine($"Simple Task {Title}");
+            Console.WriteLine($"\tSimple Task: {Title}");
         }
     }
 
@@ -33,7 +33,7 @@ namespace Lab17_Composite.Solution
             this._tasks = new List<ITask>();
         }
         public void Display(){
-            Console.WriteLine($"Task List: {Title}");
+            Console.WriteLine($"Parent: {Title}");
             foreach(var t in _tasks){
                 t.Display();
             }

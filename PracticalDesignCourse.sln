@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12-PrototypePattern", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11-BuilderPattern", "src\03-CreationalDesignPatterns\Lab11-BuilderPattern\Lab11-BuilderPattern.csproj", "{46E3B5EE-E2ED-48C8-B4BC-147DE22D9A4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab20-Flyweight", "src\04-StructuralDesignPatterns\Lab20-Flyweight\Lab20-Flyweight.csproj", "{C20A3765-7EF9-4A9C-BDF4-F768D70710A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{46E3B5EE-E2ED-48C8-B4BC-147DE22D9A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E3B5EE-E2ED-48C8-B4BC-147DE22D9A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E3B5EE-E2ED-48C8-B4BC-147DE22D9A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20A3765-7EF9-4A9C-BDF4-F768D70710A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20A3765-7EF9-4A9C-BDF4-F768D70710A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20A3765-7EF9-4A9C-BDF4-F768D70710A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20A3765-7EF9-4A9C-BDF4-F768D70710A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +173,7 @@ Global
 		{490A9D50-275E-4A99-82B9-C0A8DDAFD42B} = {E2D8E7F3-5D87-4951-B498-CFB7AAFF7FDC}
 		{FAEDF1EF-E1E3-41F9-BE86-CE20E0D77090} = {E2D8E7F3-5D87-4951-B498-CFB7AAFF7FDC}
 		{46E3B5EE-E2ED-48C8-B4BC-147DE22D9A4F} = {E2D8E7F3-5D87-4951-B498-CFB7AAFF7FDC}
+		{C20A3765-7EF9-4A9C-BDF4-F768D70710A8} = {DFC36CA3-FC4C-47F0-84F3-78F071391101}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8C36FC3-F3FE-4C12-B6AB-811962CD4A88}

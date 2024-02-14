@@ -44,7 +44,7 @@ public class CachedYoutubeLibrary : IYoutubeLibrary
             return Task.FromResult((byte[])null);
 
         //force use to download only between 12 AM and 4 AM
-        if (DateTime.Now.Hour > 4)
+        if (DateTime.Now.Hour > 1)
         {
             Console.WriteLine("Downloading is only permitted between 12 AM and 4 AM");
             return Task.FromResult((byte[])null);

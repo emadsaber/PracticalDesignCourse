@@ -46,7 +46,7 @@ namespace Lab20_Flyweight.Problem
     public class Application{
         public void StartGame(){
             var game = new Game();
-            for (int i = 0; i < 300_000; i++) //THIS WILL CONSUME 32 MB OF MEMORY :D
+            for (int i = 0; i < 300_000; i++) //THIS WILL CONSUME 6GB OF MEMORY :D
             {
                 var p = new Particle(){
                     Color = "red",

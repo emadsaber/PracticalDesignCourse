@@ -80,7 +80,7 @@ namespace Lab20_Flyweight.Solution
         public void StartGame()
         {
             var game = new Game();
-            for (int i = 0; i < 300_000; i++) //WARNING : THIS WILL CONSUME 6 GB OF MEMORY
+            for (int i = 0; i < 300_000; i++) //WARNING : THIS WILL CONSUME 32 MB OF MEMORY
             {
                 game.AddParticle(x: i, y: i + i, speed: 10, color: "red", path: "Images\\sprite_red.png");
             }
